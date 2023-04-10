@@ -1,6 +1,5 @@
 import 'package:course_app/ui/app.colors.dart';
 import 'package:course_app/views/home_view.dart';
-import 'package:course_app/views/your_courses_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -21,7 +20,6 @@ class MyApp extends StatelessWidget {
         initialRoute: "/",
         routes: {
           HomeView.routeName: (context) => HomeView(),
-          YourCoursesView.routeName: (context) => const YourCoursesView(),
         });
   }
 }

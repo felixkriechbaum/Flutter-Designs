@@ -1,8 +1,9 @@
 import 'package:course_app/ui/app.colors.dart';
+import 'package:course_app/views/dashboard_view.dart';
 import 'package:course_app/views/drawer_view.dart';
 import 'package:course_app/views/widgets/bottom_element.dart';
-import 'package:course_app/views/widgets/main_container.dart';
 import 'package:course_app/views/widgets/top_bar.dart';
+import 'package:course_app/views/your_courses_view.dart';
 import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
 
@@ -10,6 +11,12 @@ class HomeView extends StatefulWidget {
   static const String routeName = "/";
   final String name =
       "${Faker().person.firstName()} ${Faker().person.lastName()}";
+
+  List<Widget> pages = [
+    const DashboardView(),
+    const YourCoursesView(),
+  ];
+
   HomeView({super.key});
 
   @override
@@ -31,43 +38,9 @@ class _HomeViewState extends State<HomeView> {
                 flex: 1,
                 child: TopBar(widget.name, "assets/avatars/avatar_1.png")),
             Expanded(
-                flex: 3,
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.blue,
-                      borderRadius: BorderRadius.circular(large),
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.grey[400]!,
-                            offset: const Offset(0, 0),
-                            spreadRadius: 0,
-                            blurRadius: 10),
-                      ]),
-                  margin: EdgeInsets.all(medium),
-                )),
-            Expanded(
-                flex: 2,
-                child: Container(
-                  decoration: BoxDecoration(
-                      color: Colors.purple,
-                      borderRadius: BorderRadius.circular(large),
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.grey[400]!,
-                            offset: const Offset(0, 0),
-                            spreadRadius: 0,
-                            blurRadius: 10),
-                      ]),
-                  margin: EdgeInsets.all(medium),
-                )),
-            const Expanded(
-                flex: 3,
-                child: MainContainer(
-                    color: Colors.green,
-                    child: Text(
-                      "hallo",
-                      style: TextStyle(color: Colors.black),
-                    ))),
+              flex: 8,
+              child: widget.pages[selected],
+            ),
             Container(
               height: 60,
               decoration: BoxDecoration(

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class YourCoursesView extends StatefulWidget {
-  static const String routeName = "/yourCourses";
   const YourCoursesView({super.key});
 
   @override

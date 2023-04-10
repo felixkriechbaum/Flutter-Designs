@@ -23,7 +23,7 @@ class TopBar extends StatelessWidget {
             ),
           ),
           Expanded(
-              flex: 2,
+              flex: 3,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 mainAxisSize: MainAxisSize.max,

@@ -26,4 +26,19 @@ ThemeData themeDataDefault = ThemeData(
         fontSize: 12,
         fontWeight: FontWeight.bold,
       ),
+      titleLarge: TextStyle(
+        fontSize: 40,
+        fontWeight: FontWeight.bold,
+        color: Colors.white,
+      ),
+      titleMedium: TextStyle(
+        fontSize: 34,
+        fontWeight: FontWeight.w700,
+        color: Colors.white,
+      ),
+      labelSmall: TextStyle(
+        fontSize: 12,
+        fontWeight: FontWeight.w700,
+        color: Colors.black,
+      ),
     ));
