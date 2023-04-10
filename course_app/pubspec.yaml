@@ -1,0 +1,29 @@
+name: course_app
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.19.6 <3.0.0"
+
+dependencies:
+  cupertino_icons: ^1.0.2
+  faker: ^2.1.0
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/avatars/avatar_1.png
+    - assets/avatars/avatar_2.png
+    - assets/avatars/avatar_3.png
+    - assets/avatars/avatar_4.png
